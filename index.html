@@ -9,39 +9,33 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+   
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         padding: 0;
         font-family: "Helvetica", sans-serif;
+        overflow-x: hidden;
+        min-height: 100vh;
       }
 
       .image-container {
-        background-image: url("flower-img.jpg");
+        background-image: url("bg.jpeg");
         background-size: cover;
-        background-position: center;
+        background-position: center bottom;
         background-repeat: no-repeat;
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         position: relative;
-      }
-
-      .image-container img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        display: block;
-      }
-
-      @media (max-width: 480px) {
-        .image-container img {
-          height: 100vh;
-        }
+        display: flex;
+        flex-direction: column;
       }
 
       .logo-overlay {
@@ -55,18 +49,20 @@
       .logo-overlay img {
         width: 240px;
         height: auto;
+        max-width: 90vw;
       }
 
       .coming-soon-text {
         position: absolute;
-        font-family: "Playfair Display", serif;
+        font-family: 'Helvetica', sans-serif;
         top: 50%;
         left: 5%;
         transform: translateY(-50%);
-        font-size: 3rem;
+        font-size: 8rem;
         font-weight: bold;
         color: white;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        max-width: 90%;
       }
 
       .bottom-text {
@@ -74,31 +70,228 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #f8df70;
-        padding: 16px;
+        background-color: #ffec88;
+        padding: 25px;
         text-align: center;
-        font-size: 1rem;
+        font-size: 2.5rem;
         color: #111;
-        box-sizing: border-box;
+        z-index: 3;
+        line-height: 1.4;
       }
 
-      @media (max-width: 480px) {
-        .coming-soon-text {
-          font-size: 3.4rem;
+      .bottom-text a {
+        color: #111;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-          left: 8%;
-          right: 8%;
-          text-align: left;
+      .bottom-text a:hover {
+        text-decoration: underline;
+      }
+
+      /* Large desktop screens */
+      @media (min-width: 1920px) {
+        .image-container {
+          background-position: center bottom;
+        }
+        
+        .coming-soon-text {
+          font-size: 12rem;
+          left: 6%;
+        }
+        
+        .logo-overlay img {
+          width: 800px;
+        }
+
+        .bottom-text {
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 25px;
+          font-size: 3.5rem;
+        }
+      }
+
+      /* Standard desktop screens */
+      @media (max-width: 1919px) and (min-width: 1024px) {
+        .coming-soon-text {
+          font-size: 10rem;
+          left: 5%;
+        }
+        
+        .logo-overlay img {
+          width: 600px;
+        }
+
+        .bottom-text {
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 25px;
+          font-size: 3rem;
+        }
+      }
+
+      /* Tablet and smaller desktop */
+      @media (max-width: 1023px) and (min-width: 769px) {
+        .coming-soon-text {
+          font-size: 8rem;
+          left: 4%;
+        }
+
+        .logo-overlay img {
+          width: 450px;
+        }
+
+        .bottom-text {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .coming-soon-text {
+          font-size: 4rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: auto;
+          bottom: 35%;
+          text-align: center;
         }
 
         .logo-overlay img {
           width: 200px;
-          text-align: left;
         }
 
         .bottom-text {
-          font-size: 0.8rem;
+          height: 18vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.6rem;
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .coming-soon-text {
+          font-size: 3.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: auto;
+          bottom: 35%;
+          text-align: center;
+          max-width: 90%;
+        }
+
+        .logo-overlay img {
+          width: 180px;
+        }
+
+        .bottom-text {
+          height: 16vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1rem;
+          padding: 12px;
+        }
+      }
+
+      @media (max-width: 375px) {
+        .coming-soon-text {
+          font-size: 3rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: auto;
+          bottom: 35%;
+          text-align: center;
+        }
+
+        .logo-overlay img {
+          width: 160px;
+        }
+
+        .bottom-text {
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.1rem;
           padding: 10px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .coming-soon-text {
+          font-size: 2.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: auto;
+          bottom: 35%;
+          text-align: center;
+        }
+
+        .logo-overlay img {
+          width: 140px;
+        }
+
+        .bottom-text {
+          height: 14vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1rem;
+          padding: 8px;
+        }
+      }
+
+      /* Landscape orientation adjustments */
+      @media (max-height: 500px) and (orientation: landscape) {
+        .image-container {
+          min-height: 100vh;
+          background-position: center bottom;
+        }
+        
+        .coming-soon-text {
+          font-size: 4.5rem;
+          top: 45%;
+        }
+        
+        .logo-overlay {
+          top: 20px;
+        }
+        
+        .logo-overlay img {
+          width: 150px;
+        }
+
+        .bottom-text {
+          font-size: 2rem;
+        }
+      }
+
+      /* Ultra-wide screens */
+      @media (min-width: 2560px) {
+        .coming-soon-text {
+          font-size: 15rem;
+          left: 8%;
+        }
+        
+        .logo-overlay img {
+          width: 1000px;
+        }
+
+        .bottom-text {
+          font-size: 4.5rem;
         }
       }
     </style>
@@ -114,7 +307,7 @@
 
       <div class="bottom-text">
         Would you like more information about The Gentle Host?<br />
-        Then send us an email: <strong>hello@thegentlehost.com</strong>
+        Then send us an email: <a href="mailto:hello@thegentlehost.com">hello@thegentlehost.com</a>
       </div>
     </div>
   </body>
