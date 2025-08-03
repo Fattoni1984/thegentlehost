@@ -178,13 +178,34 @@
         }
       }
 
+      /* Mobile screens - show coming soon text inside yellow div */
+      @media (max-width: 768px) {
+        .coming-soon-text {
+          display: none;
+        }
+        
+        .bottom-text::before {
+          content: "coming soon";
+          display: block;
+          font-family: 'Helvetica', sans-serif;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #111;
+          text-align: center;
+          margin-bottom: 10px;
+          text-shadow: none;
+        }
+      }
+
       @media (max-width: 600px) {
         .coming-soon-text {
-          font-size: 2.2rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 110px;
-          text-align: center;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.75rem;
+          margin-bottom: 8px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
@@ -204,12 +225,13 @@
 
       @media (max-width: 480px) {
         .coming-soon-text {
-          font-size: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 100px;
-          text-align: center;
-          max-width: 90%;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.7rem;
+          margin-bottom: 6px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
@@ -229,11 +251,13 @@
 
       @media (max-width: 400px) {
         .coming-soon-text {
-          font-size: 1.8rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 95px;
-          text-align: center;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.65rem;
+          margin-bottom: 5px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
@@ -253,11 +277,13 @@
 
       @media (max-width: 375px) {
         .coming-soon-text {
-          font-size: 1.8rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 90px;
-          text-align: center;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.6rem;
+          margin-bottom: 4px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
@@ -277,11 +303,13 @@
 
       @media (max-width: 320px) {
         .coming-soon-text {
-          font-size: 1.5rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 80px;
-          text-align: center;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.5rem;
+          margin-bottom: 3px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
@@ -301,11 +329,13 @@
 
       @media (max-width: 280px) {
         .coming-soon-text {
-          font-size: 1.3rem;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 75px;
-          text-align: center;
+          display: none;
+        }
+        
+        .bottom-text::before {
+          font-size: 0.45rem;
+          margin-bottom: 2px;
+          text-shadow: none;
         }
 
         .logo-overlay img {
