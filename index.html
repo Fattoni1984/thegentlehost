@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>The Gentle Host | Coming Soon</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
@@ -58,7 +58,7 @@
         top: 50%;
         left: 5%;
         transform: translateY(-50%);
-        font-size: 8rem;
+        font-size: 3rem;
         font-weight: bold;
         color: white;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -71,12 +71,14 @@
         left: 0;
         width: 100%;
         background-color: #ffec88;
-        padding: 25px;
+        padding: 15px;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 1.2rem;
         color: #111;
         z-index: 3;
-        line-height: 1.4;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       .bottom-text a {
@@ -90,18 +92,18 @@
       }
 
       /* Large desktop screens */
-      @media (min-width: 1920px) {
+      @media (min-width: 1440px) {
         .image-container {
           background-position: center bottom;
         }
         
         .coming-soon-text {
-          font-size: 12rem;
+          font-size: 3.5rem;
           left: 6%;
         }
         
         .logo-overlay img {
-          width: 800px;
+          width: 350px;
         }
 
         .bottom-text {
@@ -110,20 +112,20 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 0 25px;
-          font-size: 3.5rem;
+          padding: 0 15px;
+          font-size: 1.6rem;
         }
       }
 
       /* Standard desktop screens */
-      @media (max-width: 1919px) and (min-width: 1024px) {
+      @media (max-width: 1439px) and (min-width: 1024px) {
         .coming-soon-text {
-          font-size: 10rem;
+          font-size: 3rem;
           left: 5%;
         }
         
         .logo-overlay img {
-          width: 600px;
+          width: 300px;
         }
 
         .bottom-text {
@@ -132,30 +134,30 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 0 25px;
-          font-size: 3rem;
+          padding: 0 15px;
+          font-size: 1.4rem;
         }
       }
 
       /* Tablet and smaller desktop */
-      @media (max-width: 1023px) and (min-width: 769px) {
+      @media (max-width: 1023px) and (min-width: 981px) {
         .coming-soon-text {
-          font-size: 8rem;
+          font-size: 2.8rem;
           left: 4%;
         }
 
         .logo-overlay img {
-          width: 450px;
+          width: 250px;
         }
 
         .bottom-text {
-          font-size: 2.5rem;
+          font-size: 1.3rem;
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 980px) {
         .coming-soon-text {
-          font-size: 4rem;
+          font-size: 2.5rem;
           left: 50%;
           transform: translateX(-50%);
           top: 120px;
@@ -163,7 +165,7 @@
         }
 
         .logo-overlay img {
-          width: 200px;
+          width: 180px;
         }
 
         .bottom-text {
@@ -172,14 +174,38 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          font-size: 1.2rem;
-          padding: 15px;
+          font-size: 0.8rem;
+          padding: 8px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .coming-soon-text {
+          font-size: 2.2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 110px;
+          text-align: center;
+        }
+
+        .logo-overlay img {
+          width: 170px;
+        }
+
+        .bottom-text {
+          height: 17vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.75rem;
+          padding: 7px;
         }
       }
 
       @media (max-width: 480px) {
         .coming-soon-text {
-          font-size: 3.5rem;
+          font-size: 2rem;
           left: 50%;
           transform: translateX(-50%);
           top: 100px;
@@ -188,7 +214,7 @@
         }
 
         .logo-overlay img {
-          width: 180px;
+          width: 160px;
         }
 
         .bottom-text {
@@ -197,22 +223,22 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          font-size: 0.9rem;
-          padding: 12px;
+          font-size: 0.7rem;
+          padding: 6px;
         }
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         .coming-soon-text {
-          font-size: 3rem;
+          font-size: 1.8rem;
           left: 50%;
           transform: translateX(-50%);
-          top: 90px;
+          top: 95px;
           text-align: center;
         }
 
         .logo-overlay img {
-          width: 160px;
+          width: 150px;
         }
 
         .bottom-text {
@@ -221,17 +247,17 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          font-size: 0.8rem;
-          padding: 10px;
+          font-size: 0.65rem;
+          padding: 5px;
         }
       }
 
-      @media (max-width: 320px) {
+      @media (max-width: 375px) {
         .coming-soon-text {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
           left: 50%;
           transform: translateX(-50%);
-          top: 80px;
+          top: 90px;
           text-align: center;
         }
 
@@ -240,13 +266,102 @@
         }
 
         .bottom-text {
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+          padding: 4px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .coming-soon-text {
+          font-size: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 80px;
+          text-align: center;
+        }
+
+        .logo-overlay img {
+          width: 120px;
+        }
+
+        .bottom-text {
           height: 14vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          font-size: 0.5rem;
+          padding: 3px;
+        }
+      }
+
+      @media (max-width: 280px) {
+        .coming-soon-text {
+          font-size: 1.3rem;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 75px;
+          text-align: center;
+        }
+
+        .logo-overlay img {
+          width: 100px;
+        }
+
+        .bottom-text {
+          height: 13vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.45rem;
+          padding: 2px;
+        }
+      }
+
+      /* Small height screens */
+      @media (max-height: 600px) {
+        .coming-soon-text {
+          font-size: 2rem;
+          top: 80px;
+        }
+        
+        .logo-overlay {
+          top: 20px;
+        }
+        
+        .logo-overlay img {
+          width: 120px;
+        }
+
+        .bottom-text {
+          height: 20vh;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-height: 500px) {
+        .coming-soon-text {
+          font-size: 1.8rem;
+          top: 70px;
+        }
+        
+        .logo-overlay {
+          top: 15px;
+        }
+        
+        .logo-overlay img {
+          width: 100px;
+        }
+
+        .bottom-text {
+          height: 25vh;
           font-size: 0.7rem;
-          padding: 8px;
         }
       }
 
@@ -258,7 +373,7 @@
         }
         
         .coming-soon-text {
-          font-size: 4.5rem;
+          font-size: 2rem;
           top: 45%;
         }
         
@@ -267,27 +382,27 @@
         }
         
         .logo-overlay img {
-          width: 150px;
+          width: 120px;
         }
 
         .bottom-text {
-          font-size: 2rem;
+          font-size: 1rem;
         }
       }
 
       /* Ultra-wide screens */
-      @media (min-width: 2560px) {
+      @media (min-width: 1920px) {
         .coming-soon-text {
-          font-size: 15rem;
+          font-size: 4rem;
           left: 8%;
         }
         
         .logo-overlay img {
-          width: 1000px;
+          width: 400px;
         }
 
         .bottom-text {
-          font-size: 4.5rem;
+          font-size: 1.8rem;
         }
       }
     </style>
@@ -302,8 +417,8 @@
       <div class="coming-soon-text">coming soon</div>
 
       <div class="bottom-text">
-        Would you like more information about The Gentle Host?<br />
-        Then send us an email: <a href="mailto:hello@thegentlehost.com">hello@thegentlehost.com</a>
+        <div>Would you like more information about The Gentle Host?</div>
+        <div>Then send us an email: <a href="mailto:hello@thegentlehost.com">hello@thegentlehost.com</a></div>
       </div>
     </div>
   </body>
